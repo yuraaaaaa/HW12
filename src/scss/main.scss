@@ -1,0 +1,239 @@
+//переменные
+$font-white: #fff;
+$hover-button: #b1a1d1;
+$hover: #061e37;
+$title10: #061e37;
+$title20: #b0bec5;
+$title30: #061e37;
+$text: #c0cbd1;
+$text4: #061e37;
+$text-card: #59697a;
+$head-section: #b5c2c9;
+$end-section: #fafafa;
+$border: #061e37;
+$button1: #061e37;
+$button2: #FFF;
+$button3: #1de9b6;
+$button4: #061e37;
+$button5: #1de9b6;
+$font: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+
+//extend 
+%exile {
+    text-decoration: none;
+}
+
+%button {
+    width: 150px;
+    height: 55px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+}
+
+%button-hover {
+    background-color: $hover-button;
+    color: $font-white;
+}
+
+%transition {
+    transition: all .3s ease-in-out;
+} 
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: $font;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../image/hero.png');
+    background-size: cover;
+    .header {
+        padding: 54px 0 85px 0;
+        display: flex;
+        justify-content: space-around;
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            color: $font-white;
+            text-decoration: none;
+
+            .icon-dart-board {
+                font-size: 30px;
+                position: relative;
+                top: 32px;
+                right: 35px;
+
+            }
+            
+            span {
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+
+            .logo__title {
+                font-weight: 800;
+            }
+        }
+
+        .nav {
+            position: relative;
+            top: 40px;
+
+            a {
+                padding: 10px;
+                @extend %exile;
+                color:$font-white;
+                transition: color .3s ease-in-out;
+            }
+
+            a:hover {
+                color: $hover;
+            }
+        }
+
+        .btn {
+            @extend %exile;
+            top: 40px;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            width: 80px;
+            height: 20px;
+            color: $font-white;
+            font-size: 12px;
+            padding-top: 3px;
+            text-transform: lowercase;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            transition: all .3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: $font-white;
+            color: $hover;
+        }
+    }
+}
+
+.start {
+    display: flex;
+    justify-content: space-between;
+    margin: 85px 150px 187px 120px;
+}
+
+.description {
+    color: $font-white;
+    display: inline-block;
+    width: 600px;
+
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 55px;
+        font-weight: 800;
+        line-height: 70px;
+    }
+
+    p {
+        margin: 20px 0 20px 0;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    button {
+        margin-top: 20px;
+        margin-right: 35px;
+    }
+
+    .dark {
+        @extend %button;
+        background-color: $hover;
+        color: #fff;
+        
+    }
+
+    .dark:hover {
+        @extend %button-hover
+    }
+
+    .white {
+        @extend %button;
+        background-color: $font-white;
+        color: $hover;
+    }
+
+    .white:hover {
+        @extend %button-hover
+    }
+}
+
+.picture {
+    position: relative;
+    width: 40%;
+    height: auto;
+    border: 1px solid $hover;
+    border-radius: 3px;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.watch-video {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    opacity: 0;
+    @extend %transition;
+
+    .watch {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-color: $hover;
+    }
+
+    .triangle {
+        position: relative;
+        top: 33%;
+        left: 35%;
+        width: 0;
+	    height: 0;
+	    border-top: 10px solid transparent;
+	    border-left: 20px solid $font-white;
+	    border-bottom: 10px solid transparent;
+    }
+
+    span {
+        position: relative;
+        padding: 5px;
+        right: 40px;
+    }
+}
+
+.watch-video:hover {
+    opacity: 1;
+}
+
