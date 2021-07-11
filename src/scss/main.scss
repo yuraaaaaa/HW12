@@ -6,6 +6,7 @@ $title10: #061e37;
 $title20: #b0bec5;
 $title30: #061e37;
 $text: #c0cbd1;
+$text2: #8a9fa9;
 $text4: #061e37;
 $text-card: #59697a;
 $head-section: #b5c2c9;
@@ -16,6 +17,13 @@ $button2: #FFF;
 $button3: #1de9b6;
 $button4: #061e37;
 $button5: #1de9b6;
+$icon1: #b388ff;
+$icon2: #80d8ff;
+$icon3: #ea80fc;
+$card1: #80d8ff;
+$card2: #82b1ff;
+$card3: #b388ff;
+$card4: #ea80fc;
 $font: 'Raleway', 'Arial', 'Helvetica', sans-serif;
 
 //extend 
@@ -237,3 +245,74 @@ body {
     opacity: 1;
 }
 
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 100px 80px 0 80px;
+}
+
+.head-section {
+    margin: 0 auto;
+    margin-bottom: 122px;
+    width: 545px;
+
+    h2 {
+        font-size: 45px;
+        font-weight: 600;
+        color: $hover;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+        font-weight: 600;
+        color: $text-card; 
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        color: $text-card;
+    }
+}
+
+.easy-useful {
+    display: flex;
+    justify-content: space-between;
+    
+    .tools {
+        width: 20%;
+        .icon-easy {
+            font-size: 70px;   
+        }
+
+        .icon-calendar {
+            color: $icon1;
+        }
+
+        .icon-player {
+            color: $icon2;
+        }
+
+        .icon-fireman {
+            color: $icon3;
+        }
+
+        h3 {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: $hover;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 400;
+            color: $text2;
+        }
+    }
+}
