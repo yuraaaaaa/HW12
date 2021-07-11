@@ -26,7 +26,10 @@ function styles() {
 function buildcopy() {
     return src([
         'src/css/**/*.css',
-        'src/**/*.html' 
+        'src/**/*.html',
+        'src/fonts/**/*',
+        'src/image/**/*.jpg',
+        'src/image/**/*.png'
     ], { base: 'src'} )
     .pipe(dest('dist'))
 }

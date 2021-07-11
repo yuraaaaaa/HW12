@@ -1,10 +1,12 @@
 .first-section .header .btn,
-.first-section .header .nav a {
+.first-section .header .nav a,
+footer .nav a {
   text-decoration: none
 }
 .description .dark,
 .description .white,
-.green {
+.green,
+form .form__button {
   width: 150px;
   height: 55px;
   outline: 0;
@@ -18,11 +20,19 @@
 }
 .description .dark:hover,
 .description .white:hover,
-.green:hover {
+.green:hover,
+form .form__button:hover {
   background-color: #b1a1d1;
   color: #fff
 }
-.watch-video {
+.first-list li,
+.first-list li a,
+.second-list li,
+.second-list li a,
+.watch-video,
+footer .nav a,
+form .checkbox,
+form .icon-uniE900::before {
   transition: all .3s ease-in-out
 }
 .easy-useful {
@@ -195,29 +205,38 @@ body {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin-top: 100px
+  margin-top: 100px;
+  margin-bottom: 0
 }
-.head-section {
+.section--second {
+  margin-top: 0;
+  background-color: #fafafa
+}
+.section__head {
   margin: 0 auto;
   margin-bottom: 122px;
   width: 545px
 }
-.head-section h2 {
+.section__head h2 {
   font-size: 45px;
   font-weight: 600;
   color: #061e37;
   margin-bottom: 30px
 }
-.head-section h3 {
+.section__head h3 {
   font-size: 25px;
   font-weight: 600;
   color: #59697a;
   margin-bottom: 30px
 }
-.head-section p {
+.section__head p {
   font-size: 15px;
   font-weight: 400;
   color: #59697a
+}
+.section__head--second {
+  margin-top: 56px;
+  margin-bottom: 56px
 }
 .easy-useful {
   display: flex;
@@ -272,7 +291,7 @@ body {
 .cards .card .icon__users {
   display: inline-block;
   position: relative;
-  top: 60px;
+  top: 40px;
   right: 100px;
   width: 70px;
   height: 70px;
@@ -295,7 +314,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: start;
-  transform: translate(160px,-5px)
+  transform: translate(160px,-23px)
 }
 .cards .card1 {
   background-color: #80d8ff
@@ -308,4 +327,143 @@ body {
 }
 .cards .card4 {
   background-color: #ea80fc
+}
+form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 605px;
+  height: auto;
+  margin-bottom: 100px
+}
+form .input-holder {
+  display: flex
+}
+form .input-holder .input {
+  width: 270px;
+  height: 50px;
+  margin: 13px 23px;
+  border: 1px solid #061e37;
+  border-radius: 2px
+}
+form .textarea {
+  width: 556px;
+  height: 180px;
+  margin-left: 23px;
+  resize: none;
+  border: 1px solid #061e37
+}
+form .input::placeholder {
+  color: #061e37;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px
+}
+form .form__button {
+  background-color: #1de9b6;
+  color: #fff;
+  position: relative;
+  left: 435px;
+  bottom: 20px
+}
+form #check {
+  display: none
+}
+form .icon-uniE900::before {
+  opacity: 0
+}
+form .checkbox {
+  display: inline-block;
+  position: relative;
+  top: 25px;
+  left: 23px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #061e37
+}
+form .label-checkbox {
+  position: relative;
+  top: 6px;
+  right: 160px
+}
+form #check:checked ~ .icon-uniE900::before {
+  opacity: 1
+}
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #061e37;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+footer .logo {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-decoration: none
+}
+footer .logo .icon-dart-board {
+  font-size: 30px;
+  position: relative;
+  top: 32px;
+  right: 35px
+}
+footer .logo span {
+  font-size: 15px;
+  text-transform: uppercase
+}
+footer .logo .logo__title {
+  font-weight: 800
+}
+footer .nav {
+  position: relative;
+  top: 40px
+}
+footer .nav a {
+  padding: 10px;
+  color: #fff
+}
+footer .nav a:hover {
+  background-color: #fff;
+  color: #061e37
+}
+.logo-exile {
+  padding: 54px 85px;
+  display: flex;
+  justify-content: space-between
+}
+.privacy-exile {
+  padding: 31px 83px 50px 35px;
+  display: flex;
+  justify-content: space-between
+}
+.first-list {
+  list-style: none;
+  display: flex
+}
+.first-list li {
+  padding: 10px
+}
+.first-list li a {
+  color: #384b5f;
+  text-decoration: none
+}
+.first-list li a:hover {
+  background-color: #fff;
+  color: #061e37
+}
+.second-list {
+  list-style: none;
+  display: flex
+}
+.second-list li {
+  padding: 10px
+}
+.second-list li a {
+  color: #384b5f;
+  text-decoration: none
+}
+.second-list li a:hover {
+  color: #fff
 }
