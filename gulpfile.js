@@ -17,8 +17,7 @@ function browsersync() {
 function styles() {
     return src('src/scss/main.scss')
     .pipe(sass())
-    .pipe(autoprefixer({overrideBrowserslists:['last 10 versions'], grid:true}))
-    .pipe(cleancss(({ level: { 1: {specialComments: 0}}, format:'beautify' })))
+    .pipe(cleancss(({ level: { 1: {specialComments: 0}}, format:'beautify'})))
     .pipe(dest('src/css'))
     .pipe(browserSync.stream())
     
@@ -40,6 +39,6 @@ function startwatch() {
 exports.browsersync = browsersync;
 exports.styles      = styles;
 exports.buildcopy   = buildcopy;
-exports.startwatch  = startwatch
+exports.startwatch  = startwatch;
 
-// exports.default  = 
+// exports.default     = parallel(styles, scripts, browsersync, startwatch); 
